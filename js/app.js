@@ -69,9 +69,8 @@ $('document').ready(function(){
 				    $(this).removeClass("btnTap").dequeue();
 				});	
 
-				// $("a[rel*=connectBox]").leanModal({ top : 200, overlay : 1, closeButton: ".modal_close" });
+
 				$("#popupLinkA").click();
-				// $('#connect-modal-content').modal();
 
 				},
 				function(f){
@@ -83,12 +82,7 @@ $('document').ready(function(){
 
 		function noBridgeFound() {
 
-			// $("a[rel*=connectNoBridgeBox]").leanModal({ top : 200, overlay : 1, closeButton: ".modal_close" });
 			$("#popupLinkB").click();
-			// $('#basic-modal-content').modal();
-
-			// $.modal('<p>No Philips Hue Bridge found. Is wifi enabled on your phone?</p><img src="./img_hue_nobridge.png" class="popupImg"/><span class="buttonfull" id="search">Search</span>');
-			// console.log("Display Popup No Bridge Found");
 
 		}	// einde noBridgeFound
 		
@@ -293,8 +287,6 @@ $('document').ready(function(){
 
 
 		function setLights(accelerationX, accelerationY, accelerationZ) {
-		//$('#btn3').click(function(e){
-			//e.preventDefault();
 
 			console.log("Running setLights with Flashvalue: "+localStorage["flashvalue"]);
 
@@ -372,14 +364,8 @@ $('document').ready(function(){
 		function onSuccess(acceleration) {
 
 	   	console.log(acceleration.x, acceleration.y, acceleration.z); 
-	   	//setLights(acceleration.x, acceleration.y, acceleration.z);   
-
-
-	   			// setLights(acceleration.x, acceleration.y, acceleration.z); 
 
 	   			res = hjs.setValue([1,2,3],{on:true});
-
-
 
 				// res = hjs.setValue([1,2,3],{hue:50000, sat:200, bri:200}); 	// Pink
 
@@ -474,7 +460,5 @@ $('document').ready(function(){
 		res = hjs.setValue([1,2,3],{hue:hue, sat:saturation, bri:brightness});  
 
 	});
- 
-
 
 });
