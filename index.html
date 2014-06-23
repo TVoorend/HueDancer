@@ -34,6 +34,120 @@
 
 <body>
 
+
+
+	<div id="startConnect">
+
+		<header>
+
+			<img id="title" class="logo" src="./images/logo.png"/>
+
+		</header>
+
+			<div class="clear"></div>
+
+		<section>
+
+		<p class="text">Tap the button below to connect to your lights:</p>
+		
+		<div id="firstConnect" class="button line"><img src="./images/img_icon_login.png"/><span>Connect to lights</span></div>
+
+		</section>
+
+	</div>
+
+
+
+	<div id="startChoose" class="close">
+
+		<header>
+
+			<img id="title" class="logo" src="./images/logo.png"/>
+
+		</header>
+
+			<div class="clear"></div>
+
+		<section>
+
+		<p class="text">Choose your colorset to dance with:</p>
+		
+		<div id="choose" class="buttonFloat lineColor blue"></div>
+
+		<div id="choose" class="buttonFloat lineColor red"></div>
+
+		<div id="choose" class="buttonFloat lineColor green"></div>
+
+		<div id="choose" class="buttonFloat lineColor yellow"></div>
+
+		</section>
+
+	</div>
+
+
+	<div id="startSettings" class="close">
+
+		<header>
+
+			<img id="title" class="logo" src="./images/logo.png"/>
+
+		</header>
+
+			<div class="clear"></div>
+
+		<section>
+
+		<p class="text">
+		Show wizard on startup:
+		</p>
+
+			<span class="buttonhalf dark" id="wizardYes">Yes</span>
+
+			<span class="buttonhalf dark" id="wizardNo">No</span>
+
+			<div class="clear"></div>		
+
+			<!-- <span class="buttonfull dark" id="backsettings">Back</span>  -->
+
+		</section>
+
+	</div>
+
+
+	<div id="startHelp" class="close">
+
+		<header>
+
+			<img id="title" class="logo" src="./images/logo.png"/>
+
+		</header>
+
+			<div class="clear"></div>
+
+		<section>
+
+		<p class="text">
+			Use your Philips Hue Lights to spice up your party. The app measures your movements and turns this into different colors on your lights. Let each of your friends pick a color and dance.
+			<br/>
+			<br/>
+			Version: 0.9
+			<br/>
+			<br/>
+			For questions and ideas feel free to contact atienkamp@gmail.com.
+			<br/>
+			<br/>
+			&copy Arjen Tienkamp & ArnoPaul Roskam
+		</p>
+		
+
+			<span class="buttonfull dark" id="backhelp">Back</span> 
+
+		</section>
+
+	</div>
+
+
+
 	<header>
 
 		<img id="title" class="logo" src="./images/logo.png"/>
@@ -42,7 +156,7 @@
 
 		<div class="clear"></div>
 
-	<section>
+	<section id="content">
 
 		<div id="myModalA" class="reveal-modal">
 			<p>Succesfully logged in to Philips Hue.</p>
@@ -69,11 +183,13 @@
 		<div id="settings" class="white line">
 			<h2>Settings</h2>
 
+			<div id="hueIPshow">In case the app cannot find your lights automatically, you can enter the IP-address here manually.</div>
+
 			<form id="settingsForm" action="javascript:alert( 'success!' );">
 
 			<div id="hueIPshow">Current: <div id="showIP"></div></div>
 
-			<input type="text" id="hueIP" class="textfield" name="hueIP" placeholder="Philips Hue IP"/>
+			<input type="number" id="hueIP" class="textfield" name="hueIP" placeholder="Philips Hue IP"/>
 
 			<input type="submit" class="submit" value="Save"/>
 
@@ -109,11 +225,16 @@
 
 
 		<div id="btn1" href="#" class="line"><img src="./images/img_icon_login.png"/><span>Connect to lights</span></div>
-		<div id="btn7" href="#" class="line"><img src="./images/img_icon_settings.png"/><span>Settings</span></div>
+		<div id="btn10" href="#" class="line"><img src="./images/img_icon_color.png"/><span>Change your colorset</span></div>
+		<!-- <div id="btn7" href="#" class="line"><img src="./images/img_icon_settings.png"/><span>Settings</span></div> -->
 		<div id="btn4" href="#" class="line"><img src="./images/img_icon_dance.png"/><span>Start dancing</span></div>
 		<div id="btn3" href="#" class="line"><img src="./images/img_icon_light.png"/><span>Stop dancing</span></div>		
-		<div id="btn8" href="#" class="line"><img src="./images/img_icon_flash.png"/><span>Flash</span></div>
-		<div id="colorPicker" href="#" class="line"><img src="./images/img_icon_color.png"/><span>Color</span></div>
+		<!-- <div id="btn8" href="#" class="line"><img src="./images/img_icon_flash.png"/><span>Flash</span></div> -->
+		<!-- <div id="colorPicker" href="#" class="line"><img src="./images/img_icon_color.png"/><span>All lights one color</span> -->
+		<div id="btn12" href="#" class="line"><img src="./images/img_icon_settings.png"/><span>Settings</span></div>	
+		<div id="btn11" href="#" class="line"><img src="./images/img_icon_help.png"/><span>About</span></div>
+		</div>
+
 
 	</section>
 

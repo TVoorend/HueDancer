@@ -3,11 +3,24 @@ $('document').ready(function(){
     if (localStorage.getItem("hueIP") === null) {
         localStorage["hueIP"] 		= 0;
         localStorage["flashvalue"] 	= 0;
+        localStorage["usercolor"] 	= 0;
+        localStorage["acceleroX"] 	= 0;
+        localStorage["acceleroY"] 	= 0;
+        localStorage["showwizard"] 	= 0;
     } 
     else
     {
        
-    }		
+    }	
+
+    if(localStorage["showwizard"] == "no") {
+    	$("div#startConnect").addClass("close");
+    	$("div#startChoose").addClass("close");
+    }
+
+    localStorage["usercolor"] 	= 0;
+    localStorage["acceleroX"] 	= 0;
+    localStorage["acceleroY"] 	= 0;	
 
     console.log("Auto: "+localStorage["hueIPauto"]);
 
@@ -48,11 +61,12 @@ $('document').ready(function(){
 		connectBridge();
 		standardButtons();
 		lightButtons();
+		pickColor();
 	}
 
 	var hjs = HueJS({
 		ipAddress:autoIP,
-		devicetype:"test2",
+		devicetype:"HueDancer",
 		username: "001788fffe16ba56"
 	});
 	
@@ -63,13 +77,6 @@ $('document').ready(function(){
 				e.preventDefault();
 				hjs.authenticate( function(f){
 
-				$("div#btn1").removeClass("blue");
-				$("div#btn1").addClass("btnTap").delay(200).queue(function(){
-				    $(this).addClass("blue");
-				    $(this).removeClass("btnTap").dequeue();
-				});	
-
-
 				$("#popupLinkA").click();
 
 				},
@@ -78,7 +85,60 @@ $('document').ready(function(){
 					console.log(f);
 				});
 			});
-		}; // einde connectBridge		
+
+
+			$('#firstConnect').click(function(e){
+				// btn1 = connect
+				e.preventDefault();
+				hjs.authenticate( function(f){
+
+				$("#popupLinkA").click();
+
+				$("div#startConnect").addClass("close");
+				$("div#startChoose").removeClass("close");
+
+				},
+				function(f){
+					alert("Error tijdens het inloggen");
+					console.log(f);
+				});
+			});
+
+		}; // einde connectBridge	
+
+		function pickColor() {
+			$('.blue').click(function(e){
+				localStorage["usercolor"] 	=	"blue";	
+				$("div#startChoose").addClass("close");
+				$("div#btn10").removeClass();
+				$("div#btn10").addClass("blue");
+				$("div#btn10").addClass("lineNoBackground");
+			});
+
+			$('.red').click(function(e){
+				localStorage["usercolor"] 	=	"red";
+				$("div#startChoose").addClass("close");	
+				$("div#btn10").removeClass();
+				$("div#btn10").addClass("red");
+				$("div#btn10").addClass("lineNoBackground");				
+			});
+
+			$('.green').click(function(e){
+				localStorage["usercolor"] 	=	"green";
+				$("div#startChoose").addClass("close");	
+				$("div#btn10").removeClass();
+				$("div#btn10").addClass("green");
+				$("div#btn10").addClass("lineNoBackground");				
+			});
+
+			$('.yellow').click(function(e){
+				localStorage["usercolor"] 	=	"yellow";
+				$("div#startChoose").addClass("close");	
+				$("div#btn10").removeClass();
+				$("div#btn10").addClass("yellow");
+				$("div#btn10").addClass("lineNoBackground");				
+			});
+		};
 
 		function noBridgeFound() {
 
@@ -100,12 +160,6 @@ $('document').ready(function(){
 				// btn3 = resetlights
 				e.preventDefault();
 
-				$("div#btn3").removeClass("line");
-				$("div#btn3").addClass("btnTap").delay(200).queue(function(){
-				    $(this).addClass("line");
-				    $(this).removeClass("btnTap").dequeue();
-				});
-
 				stopWatch();
 
 				resetLights();
@@ -118,12 +172,6 @@ $('document').ready(function(){
 				// btn4 = start dancing
 				e.preventDefault();
 
-				$("div#btn4").removeClass("line");
-				$("div#btn4").addClass("btnTap").delay(200).queue(function(){
-				    $(this).addClass("line");
-				    $(this).removeClass("btnTap").dequeue();
-				});	
-
 				startWatch();
 			});	
 
@@ -134,13 +182,6 @@ $('document').ready(function(){
 				// btn1 = connect
 				e.preventDefault();
 
-
-				$("div#btn1").removeClass("line");
-				$("div#btn1").addClass("btnTap").delay(200).queue(function(){
-				    $(this).addClass("line");
-				    $(this).removeClass("btnTap").dequeue();
-				});	
-
 				search();
 
 			});
@@ -149,13 +190,7 @@ $('document').ready(function(){
 		function standardButtons() {
 			$('#btn7').click(function(e){
 				// btn7 = settings
-				e.preventDefault();
-
-				$("div#btn7").removeClass("line");
-				$("div#btn7").addClass("btnTap").delay(200).queue(function(){
-				    $(this).addClass("line");
-				    $(this).removeClass("btnTap").dequeue();
-				});			
+				e.preventDefault();	
 
 				$("div#settings").slideToggle( "slow", function() {
 			    	// Animation complete.
@@ -165,13 +200,7 @@ $('document').ready(function(){
 
 			$('#btn8').click(function(e){
 				// btn8 = flash
-				e.preventDefault();
-
-				$("div#btn8").removeClass("line");
-				$("div#btn8").addClass("btnTap").delay(200).queue(function(){
-				    $(this).addClass("line");
-				    $(this).removeClass("btnTap").dequeue();
-				});		
+				e.preventDefault();	
 
 				$("div#flash").slideToggle( "slow", function() {
 			    	// Animation complete.
@@ -179,15 +208,49 @@ $('document').ready(function(){
 
 			});	
 
+			$('#btn10').click(function(e){
+				// btn10 = user color
+				e.preventDefault();	
+
+				$("div#startChoose").removeClass("close");
+
+			});		
+
+			$('#btn11').click(function(e){
+				// btn10 = user color
+				e.preventDefault();	
+
+				$("div#startHelp").removeClass("close");
+
+			});	
+
+			$('#backhelp').click(function(e){
+				// btn10 = user color
+				e.preventDefault();	
+
+				$("div#startHelp").addClass("close");
+
+			});	
+
+			$('#btn12').click(function(e){
+				// btn10 = user color
+				e.preventDefault();	
+
+				$("div#startSettings").removeClass("close");
+
+			});	
+
+			$('#backsettings').click(function(e){
+				// btn10 = user color
+				e.preventDefault();	
+
+				$("div#startSettings").addClass("close");
+
+			});												
+
 			$('#colorPicker').click(function(e){
 				// colorpicker = color
 				e.preventDefault();
-
-				$("div#colorPicker").removeClass("line");
-				$("div#colorPicker").addClass("btnTap").delay(200).queue(function(){
-				    $(this).addClass("line");
-				    $(this).removeClass("btnTap").dequeue();
-				});		
 
 				$("div#color").slideToggle( "slow", function() {
 			    	// Animation complete.
@@ -207,17 +270,29 @@ $('document').ready(function(){
 			$('#search').click(function(e){
 				e.preventDefault();
 
-				$("div#search").removeClass("buttonfull");
-				$("div#search").addClass("buttonfullTap").delay(200).queue(function(){
-				    $(this).addClass("buttonfull");
-				    $(this).removeClass("buttonfullTap").dequeue();
-				});
-
 				console.log("Search!");
 
 				search();
 
-			});						
+			});		
+
+			$('#wizardYes').click(function(e){
+				// btn10 = user color
+				e.preventDefault();	
+
+				localStorage["showwizard"] 	=	"yes";	
+				$("div#startSettings").addClass("close");
+
+			});	
+
+			$('#wizardNo').click(function(e){
+				// btn10 = user color
+				e.preventDefault();	
+
+				localStorage["showwizard"] 	=	"no";	
+				$("div#startSettings").addClass("close");
+
+			});	
 
 		} // einde standardButtons
 		
@@ -365,7 +440,9 @@ $('document').ready(function(){
 
 	   	console.log(acceleration.x, acceleration.y, acceleration.z); 
 
-	   			res = hjs.setValue([1,2,3],{on:true});
+
+
+	   			// res = hjs.setValue([1,2,3],{on:true});
 
 				// res = hjs.setValue([1,2,3],{hue:50000, sat:200, bri:200}); 	// Pink
 
@@ -381,55 +458,163 @@ $('document').ready(function(){
 
 				// res = hjs.setValue([1,2,3],{hue:65535, sat:200, bri:200});	// Red
 
-				if(acceleration.x > 0){
+			if(localStorage["acceleroX"] == acceleration.x || localStorage["acceleroY"] == acceleration.y) {
+				hjs.setValue([1,2,3],{on:true});
+			}
+			else if(localStorage["acceleroX"] !== acceleration.x || localStorage["acceleroY"] !== acceleration.y) {
 
-					res = hjs.setValue([1,2,3],{hue:50000, sat:200, bri:200}); 	// Pink
-
+				if(localStorage["usercolor"] == "red") {
+					acceleroRed();
 				}
-				else if(acceleration.x > 2)
-				{
-					res = hjs.setValue([1,2,3],{hue:20000, sat:200, bri:200}); 	// Light Yellow
+				else if (localStorage["usercolor"] == "green") {
+					acceleroGreen();
 				}
-				else if(acceleration.x < -2)
-				{
-					res = hjs.setValue([1,2,3],{hue:25500, sat:200, bri:200});	// Green
+				else if (localStorage["usercolor"] == "blue") {
+					acceleroBlue();
 				}
-				else
-				{
-					res = hjs.setValue([1,2,3],{hue:46920, sat:200, bri:200});	// Blue
+				else if (localStorage["usercolor"] == "yellow") {
+					acceleroYellow();
 				}
 
-				if(acceleration.y > 0){
+			}
 
-					res = hjs.setValue([1,2,3],{hue:2400, sat:100, bri:100});	// Light Orange
 
+
+				function acceleroRed() {
+					if(acceleration.x > 0 && acceleration.x <20 ){
+						res = hjs.setValue([1,2,3],{hue:64765, sat:244, bri:219, transistiontime:0.1});
+
+					// var hue 		= Math.floor(64765/65535);
+					// var saturation 	= Math.floor(244/255);
+					// var brightness 	= Math.floor(219/255);
+
+					// console.log("Yo!!!!!");
+					// console.log(hue, saturation, brightness);
+
+
+					// 	$("section#content").css("background-color","hsl(120,100%,50%)");
+					}	
+					else if(acceleration.x < 0 && acceleration.x > -20 ){
+						res = hjs.setValue([1,2,3],{hue:55690, sat:217, bri:201, transistiontime:0.1});
+					}	
+
+					if(acceleration.y > 0 && acceleration.y <20 ){
+						res = hjs.setValue([1,2,3],{hue:2505, sat:244, bri:85, transistiontime:0.1});
+					}	
+					else if(acceleration.y < 0 && acceleration.y > -20 ){
+						res = hjs.setValue([1,2,3],{hue:65293, sat:174, bri:204, transistiontime:0.1});
+					}
+
+					localStorage["acceleroX"] 	=	acceleration.x;
+					localStorage["acceleroY"] 	=	acceleration.y;
 				}
-				else
-				{
 
+
+				function acceleroGreen() {
+					if(acceleration.x > 0 && acceleration.x <20 ){
+						res = hjs.setValue([1,2,3],{hue:20200, sat:255, bri:204, transistiontime:0.1});
+					}	
+					else if(acceleration.x < 0 && acceleration.x > -20 ){
+						res = hjs.setValue([1,2,3],{hue:24222, sat:246, bri:255, transistiontime:0.1});
+					}	
+
+					if(acceleration.y > 0 && acceleration.y <20 ){
+						res = hjs.setValue([1,2,3],{hue:25170, sat:233, bri:98, transistiontime:0.1});
+					}	
+					else if(acceleration.y < 0 && acceleration.y > -20 ){
+						res = hjs.setValue([1,2,3],{hue:23583, sat:255, bri:246, transistiontime:0.1});
+					}
+
+					localStorage["acceleroX"] 	=	acceleration.x;
+					localStorage["acceleroY"] 	=	acceleration.y;
 				}	
 
 
-				if(acceleration.y > 0){
+				function acceleroBlue() {
+					if(acceleration.x > 0 && acceleration.x <20 ){
+						res = hjs.setValue([1,2,3],{hue:42324, sat:233, bri:134, transistiontime:0.1});
+					}	
+					else if(acceleration.x < 0 && acceleration.x > -20 ){
+						res = hjs.setValue([1,2,3],{hue:45282, sat:255, bri:219, transistiontime:0.1});
+					}	
 
-					res = hjs.setValue([1,2,3],{hue:65535, sat:200, bri:200});	// Red
+					if(acceleration.y > 0 && acceleration.y <20 ){
+						res = hjs.setValue([1,2,3],{hue:34514, sat:253, bri:128, transistiontime:0.1});
+					}	
+					else if(acceleration.y < 0 && acceleration.y > -20 ){
+						res = hjs.setValue([1,2,3],{hue:48196, sat:255, bri:255, transistiontime:0.1});
+					}
 
+					localStorage["acceleroX"] 	=	acceleration.x;
+					localStorage["acceleroY"] 	=	acceleration.y;
 				}
-				else
-				{
+
+
+				function acceleroYellow() {
+					if(acceleration.x > 0 && acceleration.x <20 ){
+						res = hjs.setValue([1,2,3],{hue:10790, sat:255, bri:255, transistiontime:0.1});
+					}	
+					else if(acceleration.x < 0 && acceleration.x > -20 ){
+						res = hjs.setValue([1,2,3],{hue:14303, sat:248, bri:255, transistiontime:0.1});
+					}	
+
+					if(acceleration.y > 0 && acceleration.y <20 ){
+						res = hjs.setValue([1,2,3],{hue:11613, sat:244, bri:175, transistiontime:0.1});
+					}	
+					else if(acceleration.y < 0 && acceleration.y > -20 ){
+						res = hjs.setValue([1,2,3],{hue:13947, sat:199, bri:168, transistiontime:0.1});
+					}
+
+					localStorage["acceleroX"] 	=	acceleration.x;
+					localStorage["acceleroY"] 	=	acceleration.y;
+				}											
+
+
+
+				// else if(acceleration.x > 2)
+				// {
+				// 	res = hjs.setValue([1,2,3],{hue:20000, sat:200, bri:200}); 	// Light Yellow
+				// }
+				// else if(acceleration.x < -2)
+				// {
+				// 	res = hjs.setValue([1,2,3],{hue:25500, sat:200, bri:200});	// Green
+				// }
+				// else
+				// {
+				// 	res = hjs.setValue([1,2,3],{hue:46920, sat:200, bri:200});	// Blue
+				// }
+
+				// if(acceleration.y > 0){
+
+				// 	res = hjs.setValue([1,2,3],{hue:2400, sat:100, bri:100});	// Light Orange
+
+				// }
+				// else
+				// {
+
+				// }	
+
+
+				// if(acceleration.y > 0){
+
+				// 	res = hjs.setValue([1,2,3],{hue:65535, sat:200, bri:200});	// Red
+
+				// }
+				// else
+				// {
 					
-				}
+				// }
 
-				if(acceleration.z > 0){
+				// if(acceleration.z > 0){
 
-					res = hjs.setValue([1,2,3],{hue:10300, sat:200, bri:200});	// Brownish
+				// 	res = hjs.setValue([1,2,3],{hue:10300, sat:200, bri:200});	// Brownish
 
-				}
-				else
-				{
-					res = hjs.setValue([1,2,3],{bri:254,on:true});
-					res = hjs.setValue([1,2,3],{hue:360, sat:33});
-				}				
+				// }
+				// else
+				// {
+				// 	res = hjs.setValue([1,2,3],{bri:254,on:true});
+				// 	res = hjs.setValue([1,2,3],{hue:360, sat:33});
+				// }				
 
 				
 	    }    
@@ -457,7 +642,7 @@ $('document').ready(function(){
 		var saturation 	= Math.floor(hsl[1]*255);
 		var brightness 	= Math.floor(hsl[2]*255);
 		console.log('hue: '+hue+' saturation: '+saturation+' brightness: '+brightness); 
-		res = hjs.setValue([1,2,3],{hue:hue, sat:saturation, bri:brightness});  
+		res = hjs.setValue([1,2,3],{hue:hue, sat:saturation, bri:brightness, transistiontime:0.1});  
 
 	});
 

@@ -5,7 +5,12 @@ body {
 	font-family: 'Nunito', sans-serif;
 	background-color: #000;
 	overflow: hidden;
-	background-image:url(../images/bg.jpg);
+	/*background-image:url(../images/bg.jpg);*/
+	background: url(../images/bg.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;	
 }
 
 a {
@@ -49,7 +54,7 @@ div.clear {
 	clear: both;
 }
 
-#btn1, #btn2, #btn3, #btn4, #btn7, #btn8 {
+#btn1, #btn2, #btn3, #btn4, #btn7, #btn8, #btn10, #btn11, #btn12 {
 	display: block;
 	box-sizing:border-box;		
 	-moz-box-sizing:border-box;				
@@ -86,7 +91,7 @@ div.gray {
 	background-color: #838278;
 }
 
-#btn1 img, #btn3 img, #btn4 img, #btn7 img, #btn8 img, #colorPicker img {
+#btn1 img, #btn3 img, #btn4 img, #btn7 img, #btn8 img, #colorPicker img, #btn10 img, #btn11 img, #btn12 img {
 	width:40px;
 	height:40px;
 	display: block;
@@ -97,7 +102,7 @@ div.gray {
 	/*float: left;*/
 }
 
-#btn1 span,#btn3 span,#btn4 span, #btn7 span, #btn8 span, #colorPicker span {
+#btn1 span,#btn3 span,#btn4 span, #btn7 span, #btn8 span, #colorPicker span, #btn10 span, #btn11 span, #btn12 span {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
@@ -126,7 +131,7 @@ div#colorPicker {
 	padding: 10px;
 	padding-bottom: 6px;
 	margin-bottom: 3px;
-	margin-right: 3px;
+	margin-right: 5px;
 	color:#000;
 	cursor:pointer;
 	width:48%;
@@ -250,7 +255,17 @@ img.bigLight {
 	margin-top: 60px;
 }
 
-div#settings, div#flash {
+div#settings {
+	height:60%;
+	width: 98%;
+	display: none;
+	margin-bottom: 5px;
+	box-sizing:border-box;		
+	-moz-box-sizing:border-box;	
+	padding: 6px;
+}
+
+div#flash {
 	height:50%;
 	width: 98%;
 	display: none;
@@ -410,7 +425,14 @@ div.line {
 	border-radius: 5px;
 	background-color: #FFF;
 	color: #000;
-	opacity: 0.8;
+	opacity: 0.9;
+}
+
+div.lineNoBackground {
+	border:1px solid #FFF;
+	border-radius: 5px;
+	color: #000;
+	opacity: 0.9;
 }
 
 img.popupImg {
@@ -453,6 +475,21 @@ span.buttonfull {
 	background-color: #EFEFEF;
 	margin-right: auto;
 	margin-left: auto;	
+	border-radius: 5px;
+}
+
+span.buttonhalf {
+	display: block;
+	width:45%;
+	height:35px;
+	box-sizing:border-box;		
+	-moz-box-sizing:border-box;		
+	padding: 7px;
+	background-color: #EFEFEF;
+	border-radius: 5px;
+	margin-right: 5px;
+	margin-left: 85px;
+	margin-bottom: 5px;
 }
 
 span.buttonfullTap {
@@ -467,10 +504,144 @@ span.buttonfullTap {
 	margin-left: auto;	
 }
 
+span.dark {
+	background-color: #333;
+	color:#FFF;
+}
+
 div#connect-modal-content, div#basic-modal-content {
 	display: none;
 }
 
 #color1 {
 	display: none;
+}
+
+
+div#startConnect, div#startChoose, div#startHelp, div#startSettings {
+	position: absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height: 100%;
+	background-color: #FFF;
+	z-index: 5;
+	box-sizing:border-box;		
+	-moz-box-sizing:border-box;	
+	background: url(../images/bg.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;	
+	color:#FFF;	
+	text-align: center;	
+
+}
+
+div#startChoose .blue {
+	background-color: #0080FF;
+}
+
+div#startChoose .red {
+	background-color: #FF2626;
+}
+
+div#startChoose .green {
+	background-color: #00D900;
+}
+
+div#startChoose .yellow {
+	background-color: #FFFF00;
+}
+
+.blue {
+	background-color: #0080FF;
+}
+
+.red {
+	background-color: #FF2626;
+}
+
+.green {
+	background-color: #00D900;
+}
+
+.yellow {
+	background-color: #FFFF00;
+}
+
+div.button {
+	display: block;
+	box-sizing:border-box;		
+	-moz-box-sizing:border-box;				
+	width: 100%;
+	height: 40px;
+	padding: 10px;
+	padding-bottom: 6px;
+	margin-bottom: 5px;
+	margin-right: 5px;
+	margin-left: 80px;
+	color:#000;
+	cursor:pointer;
+	width:48%;
+	float: left;
+	height:150px;	
+}
+
+div.buttonFloat {
+	display: block;
+	box-sizing:border-box;		
+	-moz-box-sizing:border-box;				
+	width: 100%;
+	height: 40px;
+	padding: 10px;
+	padding-bottom: 6px;
+	margin-bottom: 5px;
+	margin-right: 5px;
+	color:#000;
+	cursor:pointer;
+	width:48%;
+	float: left;
+	height:150px;
+}
+
+div.button img, div.buttonFloat img {
+	width:40px;
+	height:40px;
+	display: block;
+	margin-left:auto;
+	margin-right:auto;
+	padding:0;
+	margin-top: 20px;
+}
+
+div.button span, div.buttonFloat span {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	margin-top: 20px;
+}
+
+div.lineColor {
+	border:1px solid #FFF;
+	border-radius: 5px;
+	background-color: #FFF;
+	color: #000;
+	opacity: 0.7;
+}
+
+p.text {
+	width: 70%;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.close {
+	display: none;
+}
+
+.reveal-modal {
+	z-index: 999999999;
 }

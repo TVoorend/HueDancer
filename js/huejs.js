@@ -3,7 +3,7 @@ HueJS = function(params){
 	"use strict";
 	var config = {
 		ipAddress : params.ipAddress,
-		devicetype : params.devicetype || "HueJS Client",
+		devicetype : params.devicetype || "HueDancer",
 		username : params.username || "22a828f1898a4257c3f181e753241337",
 		
 	},
