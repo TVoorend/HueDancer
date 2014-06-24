@@ -1,216 +1,213 @@
 body {
-	margin:0;
-	padding-left:0;
-	font-family: Arial, sans-serif;
-	font-family: 'Nunito', sans-serif;
-	background-color: #000;
-	overflow: hidden;
-	/*background-image:url(../images/bg.jpg);*/
-	background: url(../images/bg.jpg) no-repeat center center fixed; 
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;	
+    margin:0;
+    padding-left:0;
+    font-family: Arial, sans-serif;
+    font-family: 'Nunito', sans-serif;
+    background-color: #000;
+    overflow: hidden;
+    /*background-image:url(../images/bg.jpg);*/
+    background: url(../images/bg.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 a {
-	color:#000;
-	text-decoration: none;
+    color:#000;
+    text-decoration: none;
 }
 
 header {
-	width:100%;
-	/*border-bottom: 1px dashed #D4D4D4;*/
-	box-sizing:border-box;		
-	-moz-box-sizing:border-box;		
-	padding: 6px;	
-	color: #fff;
+    width:100%;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    padding: 6px;
+    color: #fff;
 }
 
 img.logo {
-	display: block;
-	width:60%;
-	height:auto;
-	margin-left:auto;
-	margin-right:auto;	
-	margin-top: 5px;
+    display: block;
+    width:60%;
+    height:auto;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 5px;
 }
 
 section {
-	width: 100%;
-	/*float: left;*/
-	/*border-bottom: 1px solid #D4D4D4;*/
-	min-height: 100px;
-	padding: 6px;
-	padding-left: 12px;
-	box-sizing:border-box;		
-	-moz-box-sizing:border-box;
-	color: #FFF;
-	margin-left: auto;
-	margin-right: auto;
+    width: 100%;
+    min-height: 100px;
+    padding: 6px;
+    padding-left: 12px;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    color: #FFF;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 div.clear {
-	clear: both;
+    clear: both;
 }
 
 #btn1, #btn2, #btn3, #btn4, #btn7, #btn8, #btn10, #btn11, #btn12 {
-	display: block;
-	box-sizing:border-box;		
-	-moz-box-sizing:border-box;				
-	width: 100%;
-	height: 40px;
-	padding: 10px;
-	padding-bottom: 6px;
-	margin-bottom: 5px;
-	margin-right: 5px;
-	color:#000;
-	cursor:pointer;
-	width:48%;
-	float: left;
-	height:150px;
+    display: block;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    height: 40px;
+    padding: 10px;
+    padding-bottom: 6px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    color:#000;
+    cursor:pointer;
+    width:48%;
+    float: left;
+    height:150px;
 }
 
 .btnTap {
-	background-color: #ccc;
+    background-color: #ccc;
 }
 
 div.red {
-	background-color: #E54E37;
+    background-color: #E54E37;
 }
 
 div.green {
-	background-color: #D4E200;
+    background-color: #D4E200;
 }
 
 div.blue {
-	background-color: #5BB1C7;
+    background-color: #5BB1C7;
 }
 
 div.gray {
-	background-color: #838278;
+    background-color: #838278;
 }
 
 #btn1 img, #btn3 img, #btn4 img, #btn7 img, #btn8 img, #colorPicker img, #btn10 img, #btn11 img, #btn12 img {
-	width:40px;
-	height:40px;
-	display: block;
-	margin-left:auto;
-	margin-right:auto;
-	padding:0;
-	margin-top: 20px;
-	/*float: left;*/
+    width:40px;
+    height:40px;
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+    padding:0;
+    margin-top: 20px;
 }
 
 #btn1 span,#btn3 span,#btn4 span, #btn7 span, #btn8 span, #colorPicker span, #btn10 span, #btn11 span, #btn12 span {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
-	margin-top: 20px;
-	/*float: left;*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 20px;
 }
 
 div#colorSquare {
-	box-sizing:border-box;		
-	-moz-box-sizing:border-box;			
-	width:49%;
-	float: left;
-	height:150px;	
-	padding-bottom: 6px;
-	margin-bottom: 3px;
-	margin-right: 3px;	
+    -o-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    width:49%;
+    float: left;
+    height:150px;
+    padding-bottom: 6px;
+    margin-bottom: 3px;
+    margin-right: 3px;
 }
 
 div#colorPicker {
-	display: block;
-	box-sizing:border-box;		
-	-moz-box-sizing:border-box;				
-	width: 100%;
-	height: 40px;
-	padding: 10px;
-	padding-bottom: 6px;
-	margin-bottom: 3px;
-	margin-right: 5px;
-	color:#000;
-	cursor:pointer;
-	width:48%;
-	float: left;
-	height:150px;
+    display: block;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    box-sizing:border-box;
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    padding-bottom: 6px;
+    margin-bottom: 3px;
+    margin-right: 5px;
+    color:#000;
+    cursor:pointer;
+    width:48%;
+    float: left;
+    height:150px;
 }
 
 
 div#colorSquare div {
-	width:48%;
-	height:75px;
-	float: left;
-	margin-right: 3px;
-	margin-bottom: 3px;
+    width:48%;
+    height:75px;
+    float: left;
+    margin-right: 3px;
+    margin-bottom: 3px;
 }
 
 .white {
-	background-color: #FFF;
-	color: #000;
+    background-color: #FFF;
+    color: #000;
 }
 
 .orange {
-	background-color: #FF8000;
+    background-color: #FF8000;
 }
 
 .greendark {
-	background-color: #00D900;
+    background-color: #00D900;
 }
 
 .bluedark {
-	background-color: #00238C;
+    background-color: #00238C;
 }
 
 .brown {
-	background-color: #db913d;
+    background-color: #db913d;
 }
 
 .pink {
-	background-color: #FF99FF;
+    background-color: #FF99FF;
 }
 
 .yellow {
-	background-color: #FFFF73;
+    background-color: #FFFF73;
 }
 
 .deeppurple {
-	background-color: #FFBFFF;
+    background-color: #FFBFFF;
 }
 
 
 h1 {
-	display: block;
-	font-size: 25px;
-	float: left;
-	/*margin-left: 10px;*/
-	margin-top: 5px;
-	font-family: 'Playball', cursive;
-	text-align: center;
-	width:100%;
+    display: block;
+    font-size: 25px;
+    float: left;
+    margin-top: 5px;
+    font-family: 'Playball', cursive;
+    text-align: center;
+    width:100%;
 }
 
 h2 {
-	font-size: 22px;
-	float: left;
-	/*margin-left: 10px;*/
-	margin-top: 5px;
-	font-family: 'Playball', cursive;
-	text-align: center;
-	width:100%;
+    font-size: 22px;
+    float: left;
+    margin-top: 5px;
+    font-family: 'Playball', cursive;
+    text-align: center;
+    width:100%;
 }
 
 img#yourimage {
-	width:150px;
-	height:150px;
-	border-radius: 5px;
+    width:150px;
+    height:150px;
+    border-radius: 5px;
 }
 
 #takePictureField {
-	float: left;
+    float: left;
 }
 
 select {
@@ -236,151 +233,151 @@ select {
 }
 
 #valueOutput {
-	border: 1px solid #D4D4D4;
-	border-radius: 5px;
-	box-sizing:border-box;		
-	-moz-box-sizing:border-box;		
-	padding:10px;
-	clear: both;
-	margin-top: 40px;
-	background-color: #EFEFEF;
+    border: 1px solid #D4D4D4;
+    border-radius: 5px;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    padding:10px;
+    clear: both;
+    margin-top: 40px;
+    background-color: #EFEFEF;
 }
 
 img.bigLight {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	width:100%;
-	height:auto;
-	margin-top: 60px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:100%;
+    height:auto;
+    margin-top: 60px;
 }
 
 div#settings {
-	height:60%;
-	width: 98%;
-	display: none;
-	margin-bottom: 5px;
-	box-sizing:border-box;		
-	-moz-box-sizing:border-box;	
-	padding: 6px;
+    height:60%;
+    width: 98%;
+    display: none;
+    margin-bottom: 5px;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    padding: 6px;
 }
 
 div#flash {
-	height:50%;
-	width: 98%;
-	display: none;
-	margin-bottom: 5px;
-	box-sizing:border-box;		
-	-moz-box-sizing:border-box;	
-	padding: 6px;
+    height:50%;
+    width: 98%;
+    display: none;
+    margin-bottom: 5px;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    padding: 6px;
 }
 
 
 div#color {
-	height:60%;
-	width: 98%;
-	display: none;
-	margin-bottom: 5px;
-	box-sizing:border-box;		
-	-moz-box-sizing:border-box;	
-	padding: 6px;
+    height:60%;
+    width: 98%;
+    display: none;
+    margin-bottom: 5px;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    padding: 6px;
 }
 
 
 input[type='range'] {
-	-webkit-appearance: none;
-	border-radius: 5px;
-	background-color: #999;
-	height: 10px;
-	vertical-align: middle;
-	width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius: 5px;
+    background-color: #999;
+    height: 10px;
+    vertical-align: middle;
+    width: 100%;
 }
 input[type='range']::-moz-range-track {
-	 -moz-appearance: none;
-	 border-radius: 5px;
-	 
-	 background-color: #999;
-	 height: 10px;
+     -moz-appearance: none;
+     -moz-border-radius:5px;
+     border-radius: 5px;
+     background-color: #999;
+     height: 10px;
 }
 input[type='range']::-webkit-slider-thumb {
-	 -webkit-appearance: none !important;
-	 border-radius: 20px;
-	 background-color: #FFF;
-	
-	 border: 1px solid #999;
-	 height: 20px;
-	 width: 20px;
+     -webkit-appearance: none !important;
+     -webkit-border-radius: 20px;
+     border-radius: 20px;
+     background-color: #FFF;
+     border: 1px solid #999;
+     height: 20px;
+     width: 20px;
 }
 input[type='range']::-moz-range-thumb {
-	 -moz-appearance: none;
-	 border-radius: 20px;
-	 background-color: #FFF;
-	
-	 border: 1px solid #999;
-	 height: 20px;
-	 width: 20px;
+     -moz-appearance: none;
+     border-radius: 20px;
+     background-color: #FFF;
+     border: 1px solid #999;
+     height: 20px;
+     width: 20px;
 }
 
 output#rangevalue {
-	display: block;
-	width:100%;
-	padding:6px;
-	box-sizing:border-box;		
-	-moz-box-sizing:border-box;	
-	font-size: 39px;
-	text-align: center;
-	margin-top: 15px;	
-	font-family: 'Playball', cursive;
+    display: block;
+    width:100%;
+    padding:6px;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    font-size: 39px;
+    text-align: center;
+    margin-top: 15px;
+    font-family: 'Playball', cursive;
 }
 
 .textfield {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;	
-	width:90%;
-	padding: 7px;
-	font-size: 17px;
-	border-radius: 5px;
-	border: 1px solid #000;
-	background-color: #FFF;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:90%;
+    padding: 7px;
+    font-size: 17px;
+    border-radius: 5px;
+    border: 1px solid #000;
+    background-color: #FFF;
 }
 
 .submit {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 10px;
-	width:90%;
-	padding: 7px;
-	font-size: 17px;
-	border-radius: 5px;
-	border: 1px solid #000;
-	background-color: #FFF;	
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    width:90%;
+    padding: 7px;
+    font-size: 17px;
+    border-radius: 5px;
+    border: 1px solid #000;
+    background-color: #FFF;
 }
 
 #hueIPshow {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 10px;
-	width:90%;
-	padding: 7px;
-	font-size: 17px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    width:90%;
+    padding: 7px;
+    font-size: 17px;
 }
 
 #showIP {
-	display: inline;
+    display: inline;
 }
-
-
 
 #lean_overlay, #connectNoBridgeBox, #connectBox {
     position: fixed;
     z-index:10000;
     margin-right: auto;
     margin-left: auto;
-	box-sizing:border-box;		
-	-moz-box-sizing:border-box;	    
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
     left:15%;
     /*top:10%;*/
     width:100%;
@@ -393,255 +390,252 @@ output#rangevalue {
 }
 
 #lean_overlay {
-	height: 50%;
+    height: 50%;
 }
 
 #connectNoBridgeBox, #connectBox {
-	position: absolute;
-	margin-top: -120px;
-	/*margin-left: 100px;*/
+    position: absolute;
+    margin-top: -120px;
+    /*margin-left: 100px;*/
     margin-right: auto;
-    margin-left: auto;	
+    margin-left: auto;
     left:15%;/*
-    margin-left: 50px;*/  
-    padding:15px;  
+    margin-left: 50px;*/
+    padding:15px;
 }
 
 #connectNoBridgeBox p, #connectBox p {
-	margin:0;
-	padding:0;
-	margin-left:auto;
-	margin-right:auto;	
-	width:90%;
-	text-align: center;
+    margin:0;
+    padding:0;
+    margin-left:auto;
+    margin-right:auto;
+    width:90%;
+    text-align: center;
 }
 
 #popupLinkA, #popupLinkB {
-	display: none;
+    display: none;
 }
 
 div.line {
-	border:1px solid #FFF;
-	border-radius: 5px;
-	background-color: #FFF;
-	color: #000;
-	opacity: 0.9;
+    border:1px solid #FFF;
+    border-radius: 5px;
+    background-color: #FFF;
+    color: #000;
+    opacity: 0.9;
 }
 
 div.lineNoBackground {
-	border:1px solid #FFF;
-	border-radius: 5px;
-	color: #000;
-	opacity: 0.9;
+    border:1px solid #FFF;
+    border-radius: 5px;
+    color: #000;
+    opacity: 0.9;
 }
 
 img.popupImg {
-	margin-top: 30px;
-	margin-bottom: 30px;	
-	width:80%;
-	height:auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width:80%;
+    height:auto;
 }
 
 div#colorblocks {
-	clear: both;
-	width:80%;
-	height: 70%;
-	margin-right: auto;
-	margin-left: auto;
+    clear: both;
+    width:80%;
+    height: 70%;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 div#colorblocks div {
-	width:45%;
-	height:15%;
-	float: left;
-	margin-right: 10px;
-	margin-bottom: 10px;
-	/*border: 2px solid #FFF;*/
-	border-radius: 3px;
+    width:45%;
+    height:15%;
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 3px;
 }
 
 .colorTap {
-	background-color: #333;
-	opacity: 0.5;
+    background-color: #333;
+    opacity: 0.5;
 }
 
 span.buttonfull {
-	display: block;
-	width:90%;
-	height:35px;
-	box-sizing:border-box;		
-	-moz-box-sizing:border-box;		
-	padding: 7px;
-	background-color: #EFEFEF;
-	margin-right: auto;
-	margin-left: auto;	
-	border-radius: 5px;
+    display: block;
+    width:90%;
+    height:35px;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    padding: 7px;
+    background-color: #EFEFEF;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 5px;
 }
 
 span.buttonhalf {
-	display: block;
-	width:45%;
-	height:35px;
-	box-sizing:border-box;		
-	-moz-box-sizing:border-box;		
-	padding: 7px;
-	background-color: #EFEFEF;
-	border-radius: 5px;
-	margin-right: 5px;
-	margin-left: 85px;
-	margin-bottom: 5px;
+    display: block;
+    width:45%;
+    height:35px;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    padding: 7px;
+    background-color: #EFEFEF;
+    border-radius: 5px;
+    margin-right: 5px;
+    margin-left: 85px;
+    margin-bottom: 5px;
 }
 
 span.buttonfullTap {
-	display: block;
-	width:90%;
-	height:35px;
-	box-sizing:border-box;		
-	-moz-box-sizing:border-box;		
-	padding: 7px;
-	background-color: #CCC;
-	margin-right: auto;
-	margin-left: auto;	
+    display: block;
+    width:90%;
+    height:35px;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    padding: 7px;
+    background-color: #CCC;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 span.dark {
-	background-color: #333;
-	color:#FFF;
+    background-color: #333;
+    color:#FFF;
 }
 
 div#connect-modal-content, div#basic-modal-content {
-	display: none;
+    display: none;
 }
 
 #color1 {
-	display: none;
+    display: none;
 }
 
-
 div#startConnect, div#startChoose, div#startHelp, div#startSettings {
-	position: absolute;
-	top:0;
-	left:0;
-	width:100%;
-	height: 100%;
-	background-color: #FFF;
-	z-index: 5;
-	box-sizing:border-box;		
-	-moz-box-sizing:border-box;	
-	background: url(../images/bg.jpg) no-repeat center center fixed; 
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;	
-	color:#FFF;	
-	text-align: center;	
-
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+    background-color: #FFF;
+    z-index: 5;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    background: url(../images/bg.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color:#FFF;
+    text-align: center;
 }
 
 div#startChoose .blue {
-	background-color: #0080FF;
+    background-color: #0080FF;
 }
 
 div#startChoose .red {
-	background-color: #FF2626;
+    background-color: #FF2626;
 }
 
 div#startChoose .green {
-	background-color: #00D900;
+    background-color: #00D900;
 }
 
 div#startChoose .yellow {
-	background-color: #FFFF00;
+    background-color: #FFFF00;
 }
 
 .blue {
-	background-color: #0080FF;
+    background-color: #0080FF;
 }
 
 .red {
-	background-color: #FF2626;
+    background-color: #FF2626;
 }
 
 .green {
-	background-color: #00D900;
+    background-color: #00D900;
 }
 
 .yellow {
-	background-color: #FFFF00;
+    background-color: #FFFF00;
 }
 
 div.button {
-	display: block;
-	box-sizing:border-box;		
-	-moz-box-sizing:border-box;				
-	width: 100%;
-	height: 40px;
-	padding: 10px;
-	padding-bottom: 6px;
-	margin-bottom: 5px;
-	margin-right: 5px;
-	margin-left: 80px;
-	color:#000;
-	cursor:pointer;
-	width:48%;
-	float: left;
-	height:150px;	
+    display: block;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    padding-bottom: 6px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    margin-left: 80px;
+    color:#000;
+    cursor:pointer;
+    width:48%;
+    float: left;
+    height:150px;
 }
 
 div.buttonFloat {
-	display: block;
-	box-sizing:border-box;		
-	-moz-box-sizing:border-box;				
-	width: 100%;
-	height: 40px;
-	padding: 10px;
-	padding-bottom: 6px;
-	margin-bottom: 5px;
-	margin-right: 5px;
-	color:#000;
-	cursor:pointer;
-	width:48%;
-	float: left;
-	height:150px;
+    display: block;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    padding-bottom: 6px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    color:#000;
+    cursor:pointer;
+    width:48%;
+    float: left;
+    height:150px;
 }
 
 div.button img, div.buttonFloat img {
-	width:40px;
-	height:40px;
-	display: block;
-	margin-left:auto;
-	margin-right:auto;
-	padding:0;
-	margin-top: 20px;
+    width:40px;
+    height:40px;
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+    padding:0;
+    margin-top: 20px;
 }
 
 div.button span, div.buttonFloat span {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
-	margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 20px;
 }
 
 div.lineColor {
-	border:1px solid #FFF;
-	border-radius: 5px;
-	background-color: #FFF;
-	color: #000;
-	opacity: 0.7;
+    border:1px solid #FFF;
+    border-radius: 5px;
+    background-color: #FFF;
+    color: #000;
+    opacity: 0.7;
 }
 
 p.text {
-	width: 70%;
-	display: block;
-	margin-right: auto;
-	margin-left: auto;
+    width: 70%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .close {
-	display: none;
+    display: none;
 }
 
 .reveal-modal {
-	z-index: 999999999;
+    z-index: 999999999;
 }
